@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Penguin Species Classifier</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Penguin Species Classifier</h1>
+    <p class="subtext">
+      Deep neural network built with PyTorch, exported to ONNX, and deployed in the browser with JavaScript.
+    </p>
+
+    <div class="card">
+      <label>Bill Length (mm)</label>
+      <input id="bill_length_mm" type="number" step="0.1" value="45.0" />
+
+      <label>Bill Depth (mm)</label>
+      <input id="bill_depth_mm" type="number" step="0.1" value="17.0" />
+
+      <label>Flipper Length (mm)</label>
+      <input id="flipper_length_mm" type="number" step="0.1" value="210.0" />
+
+      <label>Body Mass (g)</label>
+      <input id="body_mass_g" type="number" step="1" value="5000" />
+
+      <button id="predictBtn">Predict Species</button>
+      <button id="sampleBtn" class="secondary">Load Sample</button>
+    </div>
+
+    <div class="card">
+      <h2>Prediction</h2>
+      <p id="status">Model loading...</p>
+      <div id="result"></div>
+    </div>
+
+    <div class="card small">
+      <h3>Typical species labels</h3>
+      <p>Adelie, Chinstrap, Gentoo</p>
+      <p class="tiny">Enter measurements and click Predict Species.</p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

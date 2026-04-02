@@ -1,0 +1,27 @@
+{
+  "feature_names": [
+    "bill_length_mm",
+    "bill_depth_mm",
+    "flipper_length_mm",
+    "body_mass_g"
+  ],
+  "class_names": [
+    "Adelie",
+    "Chinstrap",
+    "Gentoo"
+  ],
+  "scaler_mean": [
+    44.07179476839282,
+    17.13479852501726,
+    200.94871794871796,
+    4209.798534798535
+  ],
+  "scaler_scale": [
+    5.486070585000855,
+    2.0048105300096277,
+    13.882458171249468,
+    798.6181149195817
+  ],
+  "test_accuracy": 1.0,
+  "train_accuracy": 0.9963
+}
